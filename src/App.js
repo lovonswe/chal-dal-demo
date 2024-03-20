@@ -3,6 +3,8 @@ import './App.css';
 import RecipeReviewCard from './components/card/RecipeReviewCard';
 import CardGpt from './components/card/CardGpt';
 import ProductCard from './components/card/ProductCard';
+import ProductCategoryCard from './components/card/ProductCategoryCard';
+import ReciepeCard from './components/card/ReciepeCard';
 
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       {/* <RecipeReviewCard />
       <CardGpt product={product}/> */}
       <ProductCard />
+      <ReciepeCard />
     </div>
   );
 }
