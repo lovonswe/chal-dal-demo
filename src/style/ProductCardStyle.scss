@@ -1,9 +1,146 @@
 .card-container {
-    height: 300px;
-    width: 200px;
+    // position: relative;
+    height: 350px;
+    width: 225px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.card-background {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 350px;
+    width: 225px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px rgba(128, 122, 124, 0.35);
+    z-index: 1;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 1px rgba(128, 122, 124, 0.35);
+    }
 }
 
-.card-container:hover {
-    transform: scale(1.05); /* Scale up on hover */
-  }
-  
+.product-image-wrapper {
+    padding: 5px;
+}
+
+.product-image {
+    border-radius: 5px;
+}
+
+.product-title {
+    text-align: center;
+    height: 75px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+
+.measurement-wrapper {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.measurement {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: auto;
+    margin: auto;
+}
+
+.price-container-wrapper {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.price-container {
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: auto;
+    margin: auto;
+}
+
+.dollar-icon {
+    // border: 1px solid red;
+    font-size: 10px;
+    height: 14px;
+    color: #e43215;
+
+}
+
+.amount {
+    font-size: 18px;
+    font-weight: 700;
+    color: #e43215;
+    margin-left: 3px;
+}
+.card-footer {
+    margin: auto;
+    // background-color: #ff8182;
+    border: 1px solid rgb(204, 196, 196);
+    border-radius: 5px;
+    // width: 215px;
+    height: 35px;
+    margin: 5px;
+}
+
+.foreground-wrapper {
+    border: 1px solid rgb(227, 8, 45);
+    position: absolute;
+    justify-content: flex-end;
+    height: 350px;
+    width: 225px;
+    
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card-forground {
+    background-color: black;
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 340px;
+    width: 215px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 1px rgba(128, 122, 124, 0.35);
+    z-index: 2;
+
+    &:hover {
+        background-color: rgba(3, 0, 0, 0.7);
+    }
+}
+
+.test{
+    // padding-top: 10px;
+    margin: auto;
+    justify-content: center;
+    // position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid blue;
+}
+.blur-div{
+    position: absolute;
+    // top:0;
+    // left: 0;
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    z-index: 1;
+}
+.contents{
+    z-index: 100;
+    background-color: gray;
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
