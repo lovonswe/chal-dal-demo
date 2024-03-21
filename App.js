@@ -5,7 +5,7 @@ import CardGpt from './components/card/CardGpt';
 import ProductCard from './components/card/ProductCard';
 import ProductCategoryCard from './components/card/ProductCategoryCard';
 import ReciepeCard from './components/card/ReciepeCard';
-import ProductDetails from './components/ProductDetails';
+import ProductDetails from './src/components/ProductDetails';
 
 
 function App() {
@@ -16,11 +16,12 @@ function App() {
   }
   return (
     <div >
-      {/* {/* <RecipeReviewCard />
-       <CardGpt product={product}/> */}
-       {/* <ProductCard />
-       <ReciepeCard />  */}
-       <ProductDetails />
+      {/* <RecipeReviewCard />
+      <CardGpt product={product}/> */}
+      {/* <ProductCard />
+      <ReciepeCard /> */}
+      <ProductDetails />
+      <div>hi</div>
     </div>
   );
 }

@@ -130,7 +130,7 @@ function ProductCard() {
             </div>
           ) : (
             <div className="card-footer">
-              <IconButton>
+              <IconButton onClick={increaseCartCount}>
                 <AddShoppingCartIcon color="success"/>
                 <Typography color={"#ff4d4d"} fontWeight={700} marginLeft={1}> Add to bag</Typography>
               </IconButton>
