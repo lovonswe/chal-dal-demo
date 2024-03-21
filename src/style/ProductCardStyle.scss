@@ -87,6 +87,17 @@
   // width: 215px;
   height: 35px;
   margin: 5px;
+  text-align: center;
+  &:hover {
+    -webkit-box-shadow: inset 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: inset 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+    box-shadow: inset 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+  }
+  // &:hover {
+  //   -webkit-box-shadow: 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+  //   -moz-box-shadow: 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+  //   box-shadow: 0px 6px 12px -3px rgba(0, 0, 0, 0.68);
+  // }
 }
 
 .foreground-wrapper {
@@ -179,8 +190,8 @@
       height: auto;
       margin: auto;
     }
-    &:hover{
-        background-color: #e6e2e1;
+    &:hover {
+      background-color: #e6e2e1;
     }
   }
 
@@ -212,13 +223,13 @@
   border-radius: 5px;
   height: 34px;
   margin: 5px;
-  .remove{
+  .remove {
     color: white;
     font-size: 20px;
     font-weight: 700;
     margin-left: 5px;
   }
-  .cart-item-count-in-footer{
+  .cart-item-count-in-footer {
     // font-size: 60px;
     // font-weight: 375;
     // margin-left: 10px;
@@ -233,18 +244,17 @@
     border-left: 2px solid rgb(83, 78, 78);
     border-right: 2px solid rgb(83, 78, 78);
   }
-  .add{
+  .add {
     color: white;
     font-size: 20px;
     font-weight: 700;
     margin-right: 5px;
   }
-  &:hover{
+  &:hover {
     background-color: #e65f5f;
     // .add{
     //     background-color:  #c54242;
     // }
-
   }
 }
 
