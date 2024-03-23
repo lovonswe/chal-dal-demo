@@ -6,6 +6,8 @@ import ProductCard from './components/card/ProductCard';
 import ProductCategoryCard from './components/card/ProductCategoryCard';
 import ReciepeCard from './components/card/ReciepeCard';
 import ProductDetails from './components/ProductDetails';
+import Navbar from './components/Navbar';
+import Home from './assets/Home';
 
 
 function App() {
@@ -18,9 +20,13 @@ function App() {
     <div >
       {/* {/* <RecipeReviewCard />
        <CardGpt product={product}/> */}
-       {/* <ProductCard />
-       <ReciepeCard />  */}
-       <ProductDetails />
+     {/* <ProductCard />  */}
+       {/* <ReciepeCard /> */}
+       <Navbar />
+       <Home />
+       
+                {/* <ProductDetails /> */}
+
     </div>
   );
 }
