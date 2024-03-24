@@ -9,7 +9,8 @@ import ProductDetails from './components/ProductDetails';
 import Navbar from './components/Navbar';
 import Home from './assets/Home';
 import ShoppingCart from './components/shoppingCart/ShoppingCart';
-
+import Sidebar from './components/sidebar/sidebar';
+import Sidebars from './components/sidebar/sidebar';
 
 function App() {
   const product = {
@@ -23,10 +24,11 @@ function App() {
        <CardGpt product={product}/> */}
      {/* <ProductCard />  */}
        {/* <ReciepeCard /> */}
-       <Navbar />
+       {/* <Navbar />
        <Home />
-       <ShoppingCart />       
+       <ShoppingCart />        */}
                 {/* <ProductDetails /> */}
+                <Sidebars />
     </div>
   );
 }
