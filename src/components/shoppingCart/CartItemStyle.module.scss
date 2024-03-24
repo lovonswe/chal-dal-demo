@@ -1,0 +1,36 @@
+.cartitemcontainer {
+    border: 1px solid red;
+    display: flex;
+
+    .addremovebutton {
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        .uparrow {
+            border: 1px solid green;
+        }
+        .productincart{
+            border: 1px solid green;
+            text-align: center;
+        }
+        .downarrow {
+            border: 1px solid green;
+        }
+
+    }
+    .productdetails {
+        border: 1px solid green;
+        flex-grow: 1px;
+        display: flex;
+        align-items: center;
+        .imagecontainer {
+            border: 1px solid red;
+        }
+
+    }
+    .cancel {
+        
+        border: 1px solid red;
+        margin: auto;
+    }
+}
