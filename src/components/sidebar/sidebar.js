@@ -130,7 +130,7 @@ function Sidebars() {
           {selectedCategory === index && category.subCategories && (
             <ul className="subcategory-list">
               {category.subCategories && category.subCategories.map((subcategory, subIndex) => (
-                <li key={subIndex} onClick={() => handleSubcategoryClick(subcategory)}>
+                <li key={subIndex} onClick={() => handleSubcategoryClick(subcategory.name)}>
                   {
                     console.log("subcategory : ", subcategory)
                   }
@@ -138,10 +138,13 @@ function Sidebars() {
                   { 
                   subcategory.subCategories &&
                   <ul className="sub-subcategory-list">
-                  {selectedSubcategory === subcategory && subcategory.subcategories.map(
-                    (sub)=>
+                  {
+                    console.log("subCategories: " ,subcategory)
+                  }
+                  {selectedSubcategory === subcategory.name && subcategory.subCategories.map(
+                    (sub, index)=>
                     
-                      <li>{sub.name}</li>
+                      <li key={index}>{sub.name}</li>
                       // <li>Sub-subcategory 2</li>
                       // <li>Sub-subcategory 3</li>
                     
