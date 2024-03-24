@@ -25,9 +25,8 @@ function App() {
        {/* <ReciepeCard /> */}
        <Navbar />
        <Home />
-       {/* <ShoppingCart />        */}
+       <ShoppingCart />       
                 {/* <ProductDetails /> */}
-<ProductCard /> 
     </div>
   );
 }

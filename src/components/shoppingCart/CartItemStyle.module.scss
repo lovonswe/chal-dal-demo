@@ -1,35 +1,53 @@
 .cartitemcontainer {
     border: 1px solid red;
     display: flex;
+    height: 100px;
+    width: 95%;
+    margin: 5px;
 
     .addremovebutton {
         border: 1px solid red;
         display: flex;
         flex-direction: column;
+        justify-content: center;
+
         .uparrow {
             border: 1px solid green;
         }
-        .productincart{
+
+        .productincart {
             border: 1px solid green;
             text-align: center;
         }
+
         .downarrow {
             border: 1px solid green;
         }
 
     }
+
     .productdetails {
         border: 1px solid green;
-        flex-grow: 1px;
+        flex-grow: 1;
         display: flex;
         align-items: center;
-        .imagecontainer {
-            border: 1px solid red;
+        justify-content: space-around;
+        .imageDetaisWrapper {
+            border: 1px solid green;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            .imagecontainer {
+                border: 1px solid red;
+            }
         }
 
-    }
-    .cancel {
         
+
+    }
+
+    .cancel {
+
         border: 1px solid red;
         margin: auto;
     }
