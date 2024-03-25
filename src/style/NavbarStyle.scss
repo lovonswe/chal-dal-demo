@@ -17,8 +17,12 @@ $red-light: #ff4e56;
     background-color: $navar-color;
     box-sizing: border-box;
     display: flex;
-    direction: row;
+    flex-direction: row;
     justify-content: space-between;
+
+    .input-container {
+        position: relative; width: 70%; margin-top: 7px;
+    }
     
     .location {
         margin: auto;
@@ -32,5 +36,24 @@ $red-light: #ff4e56;
         text-align: center;
         margin: auto;
         border-radius: 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .input-container {
+            widht: 100%;
+            .input-x {
+                border: 1px solid red;
+                width: 100%;
+            }
+            .search-icon {
+                display: none;
+            }
+        }
     }
 }
