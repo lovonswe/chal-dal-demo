@@ -1,106 +1,26 @@
 import React, { useState } from 'react';
 import './Sidebar.css'; // You can define your styles in Sidebar.css
 import { categories } from './SidebarData';
+import styled from '@emotion/styled';
+import { useSidebarStore } from '../../store/FlagStore';
+
+
+const CustomSidebar = styled.div`
+z-index: 95;
+position: fixed;
+top: 55px;
+left: ${(props)=>props.open? "0": "-250px"};
+width: 250px;
+height: 100%;
+background-color: #ffffff;
+transition: transform 0.3s ease;
+overflow-y: auto;
+padding-top: 10px; /* Added padding-top */
+`;
+
 function Sidebars() {
   const [isOpen, setIsOpen] = useState(true);
-
-  // const [categories, setCategories] = useState([
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },{
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   },
-  //   {
-  //     name: 'Category 1',
-  //     subcategories: ['Subcategory 1.1', 'Subcategory 1.2', 'Subcategory 1.3']
-  //   },
-  //   {
-  //     name: 'Category 2',
-  //     subcategories: ['Subcategory 2.1', 'Subcategory 2.2']
-  //   },
-  //   {
-  //     name: 'Category 3',
-  //     subcategories: ['Subcategory 3.1', 'Subcategory 3.2', 'Subcategory 3.3']
-  //   }
-  // ]);
+  const {open} = useSidebarStore();
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
@@ -119,8 +39,8 @@ function Sidebars() {
   };
 
   return (
-    <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-      <button className="toggle-button" onClick={toggleSidebar}>{isOpen ? 'Close' : 'Open'}</button>
+    <CustomSidebar open={open} className={`sidebar ${isOpen ? 'open' : ''}` }>
+      {/* <button className="toggle-button" onClick={toggleSidebar}>{isOpen ? 'Close' : 'Open'}</button> */}
       {categories.map((category, index) => (
         <div key={index}>
           <div className="category" onClick={() => handleCategoryClick(index)}>
@@ -156,7 +76,7 @@ function Sidebars() {
           )}
         </div>
       ))}
-    </div>
+    </CustomSidebar>
   );
 }
 

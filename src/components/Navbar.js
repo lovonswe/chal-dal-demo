@@ -9,6 +9,7 @@ import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { useSidebarStore } from '../store/FlagStore';
 
 const top100Films = [
     { label: 'The Shawshank Redemption', year: 1994 },
@@ -139,9 +140,13 @@ const top100Films = [
 
 function Navbar() {
     const chaldalLogo = "https://chaldn.com/asset/Egg.ChaldalWeb.Fabric/Egg.ChaldalWeb1/1.0.0-Deploy-Release-450/Default/components/header/Header/images/logo-small.png?q=low&webp=1&alpha=1";
+    const {updateSidebarStatus}=useSidebarStore();
+    const handleToggle = (e)=> {
+        updateSidebarStatus(!e);
+    }
     return (
         <div className='navbar'>
-            <Hamburger />
+            <Hamburger onToggle={(e)=>{handleToggle(e)}}/>
             <IconButton>
                 <img src={chaldalLogo} height={"40px"} />
             </IconButton>

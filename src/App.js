@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+// import './App.css';
 import RecipeReviewCard from './components/card/RecipeReviewCard';
 import CardGpt from './components/card/CardGpt';
 import ProductCard from './components/card/ProductCard';
@@ -11,6 +11,7 @@ import Home from './assets/Home';
 import ShoppingCart from './components/shoppingCart/ShoppingCart';
 import Sidebar from './components/sidebar/sidebar';
 import Sidebars from './components/sidebar/sidebar';
+import Offer from './pages/Offer';
 
 function App() {
   const product = {
@@ -28,7 +29,8 @@ function App() {
        <Home />
        <ShoppingCart />        */}
                 {/* <ProductDetails /> */}
-                <Sidebars />
+                {/* <Sidebars /> */}
+                <Offer />
     </div>
   );
 }

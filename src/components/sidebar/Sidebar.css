@@ -1,14 +1,4 @@
-.sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #ffffff;
-    transition: transform 0.3s ease;
-    overflow-y: auto;
-    padding-top: 10px; /* Added padding-top */
-  }
+
   
   .category {
     display: flex;
